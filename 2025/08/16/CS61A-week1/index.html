@@ -29,7 +29,7 @@
 <meta property="og:image" content="https://elizabeththh.github.io/img/w1/p1.png">
 <meta property="og:image" content="https://elizabeththh.github.io/img/w1/p2.png">
 <meta property="article:published_time" content="2025-08-16T00:47:01.000Z">
-<meta property="article:modified_time" content="2025-08-20T02:36:11.425Z">
+<meta property="article:modified_time" content="2025-08-26T07:34:12.683Z">
 <meta property="article:author" content="Elizabethhh">
 <meta property="article:tag" content="Python学习">
 <meta property="article:tag" content="CS61A">
@@ -304,7 +304,7 @@
               <p id="updated-time" class="note note-info" style="display: none">
                 
                   
-                    本文最后更新于 2025-08-20T10:36:11+08:00
+                    本文最后更新于 2025-08-26T15:34:12+08:00
                   
                   
 
@@ -315,8 +315,8 @@
               <div class="markdown-body">
                 
                 <p><font face=STkaiti><font size=4><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;开始第一周的学习！在未来的日志里，我会将关注点放所学习到的编程思想上，而不是零零碎碎的语法知识。（当然也会记录一下Python核心&#x2F;陌生概念，尽量简洁）编程语言有许多，语法也存在大大小小的差别。但是编程思想，或者说解决问题的哲学是通用的。学习计算机就是学习如何用编程思想解决问题。</p>
-<h2 id="Python之禅"><a href="#Python之禅" class="headerlink" title="Python之禅"></a>Python之禅</h2><p><em><strong>There should be one– and preferably only one –obvious way to do it.</strong></em></p>
-<h2 id="语言知识"><a href="#语言知识" class="headerlink" title="语言知识"></a>语言知识</h2><ol>
+<h2 id="Python之禅"><a href="#Python之禅" class="headerlink" title="Python之禅"></a></font>Python之禅<font size=5></h2><p><em><strong>There should be one– and preferably only one –obvious way to do it.</strong></em></p>
+<h2 id="语言知识"><a href="#语言知识" class="headerlink" title="语言知识"></a></font>语言知识<font size=5></h2><ol>
 <li>在Python中赋值语句是将<strong>名字</strong>绑定到<strong>值</strong>的过程</li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span>radius = <span class="hljs-number">10</span><br><span class="hljs-meta">&gt;&gt;&gt; </span>radius<br><span class="hljs-number">10</span><br><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-number">2</span> * radius<br><span class="hljs-number">20</span><br></code></pre></td></tr></table></figure>
@@ -349,7 +349,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">from</span> doctest <span class="hljs-keyword">import</span> run_docstring_examples<br><span class="hljs-meta">&gt;&gt;&gt; </span>run_docstring_examples(sum_naturals, <span class="hljs-built_in">globals</span>(), <span class="hljs-literal">True</span>)<br>Finding tests <span class="hljs-keyword">in</span> NoName<br>Trying:<br>    sum_naturals(<span class="hljs-number">10</span>)<br>Expecting:<br>    <span class="hljs-number">55</span><br>ok<br>Trying:<br>    sum_naturals(<span class="hljs-number">100</span>)<br>Expecting:<br>    <span class="hljs-number">5050</span><br>ok<br></code></pre></td></tr></table></figure>
 
 <p>第一个参数是函数名；第二个是内置函数<code>globals()</code>，返回全局环境；最后一个是是否开启<em>verbose output</em>的布尔值  </p>
-<h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a>高阶函数</h3><p>高阶函数是指能够接收一个或多个函数作为参数，或者返回一个函数作为结果的函数。</p>
+<h3 id="高阶函数"><a href="#高阶函数" class="headerlink" title="高阶函数"></a></font>高阶函数<font size=5></h3><p>高阶函数是指能够接收一个或多个函数作为参数，或者返回一个函数作为结果的函数。</p>
 <ol start="7">
 <li>函数的柯里化(Currying)<br>把接受多个参数的函数变换成接受<strong>单一参数</strong>的函数</li>
 </ol>
@@ -395,7 +395,7 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-meta">&gt;&gt;&gt; </span><span class="hljs-keyword">def</span> <span class="hljs-title function_">triple</span>(<span class="hljs-params">x</span>):<br>        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span> * x<br><span class="hljs-meta">&gt;&gt;&gt; </span>triple = trace(triple)<br></code></pre></td></tr></table></figure>
 
 
-<h2 id="编程思想"><a href="#编程思想" class="headerlink" title="编程思想"></a>编程思想</h2><ol>
+<h2 id="编程思想"><a href="#编程思想" class="headerlink" title="编程思想"></a></font>编程思想<font size=5></h2><ol>
 <li><p>绑定是最简单的抽象(abstraction)<br>这种将数值抽象为有具体意义的概念的做法，可以让我们在思考问题时不必关心数据的多少，变化，从而简化思维过程。当然程序员要确保并维护<strong>名字</strong>与相对应的<strong>数值</strong>绑定</p>
 </li>
 <li><p>定义函数的哲学</p>
@@ -410,7 +410,7 @@
 <li><p>抽象<br>作为程序员，我们要有能够识别我们的程序中底层抽象的能力，并对其进行泛化以构建更强大的抽象。作为程序员，我们要选择适合任务的抽象级别。厕所脏了，在清理的时候把脏东西抽象碳氮等元素的有机组成显然是不合适的。解决具体的问题应该在具体、合适的抽象级别思考。</p>
 </li>
 </ol>
-<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a>作业</h2><p>HW01, Lab00和hog都已完成，已经推送到github仓库：<br><a target="_blank" rel="noopener" href="https://github.com/Elizabeththh/cs61a">链接</a></p>
+<h2 id="作业"><a href="#作业" class="headerlink" title="作业"></a></font>作业<font size=5></h2><p>HW01, Lab00和hog都已完成，已经推送到github仓库：<br><a target="_blank" rel="noopener" href="https://github.com/Elizabeththh/cs61a">链接</a></p>
 
                 
               </div>
