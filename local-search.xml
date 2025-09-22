@@ -8,7 +8,7 @@
     <link href="/2025/09/22/%E5%A5%BD%E5%A4%9A%E5%8F%AA%E7%94%B2%E5%A3%B3%E8%99%AB/"/>
     <url>/2025/09/22/%E5%A5%BD%E5%A4%9A%E5%8F%AA%E7%94%B2%E5%A3%B3%E8%99%AB/</url>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><p><meting-js    name="Across the Universe"    artist="The Beatles"    url="/music/Across the Universe.flac"    cover="/music/letitbe.jpg"><br></meting-js></p><p><font size=4><font face=STKaiti><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经在网易云建过一个歌单，叫做「二十五只甲壳虫」，当时给歌单写的描述是「个人心中披头士TOP25，排名不分先后，但第一永远会是 <strong>Across the Universe</strong>」</p>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css"><script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js" class="aplayer-secondary-script-marker"></script><script class="meting-secondary-script-marker" src="/assets/js/Meting.min.js"></script><script>console.error("Error: [hexo-tag-aplayer] Specified asset file not found ([/music/letitbe.jpg,)");</script><p><font size=4><font face=STKaiti><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经在网易云建过一个歌单，叫做「二十五只甲壳虫」，当时给歌单写的描述是「个人心中披头士TOP25，排名不分先后，但第一永远会是 <strong>Across the Universe</strong>」</p>]]></content>
     
     
     
