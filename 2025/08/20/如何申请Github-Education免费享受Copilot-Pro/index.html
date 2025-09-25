@@ -47,6 +47,8 @@
 
 
 
+    <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
+
 
 
 
@@ -75,19 +77,37 @@
           
             
               <li class="menu-item">
-                <a href="/">Home</a>
+                <a href="/">主页</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/archives/">Archive</a>
+                <a href="/archives/">归档</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/categories/gallery/">Gallery</a>
+                <a href="/categories/gallery/">画廊</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/songs/">听音</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/movies/">观影</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/books/">阅读</a>
               </li> 
                    
           
@@ -132,7 +152,7 @@
             
         </div>
         <span class="post-date">
-            2025 8月 20
+            2025-08-20
         </span>
     </div>
     <div class="post-img">
@@ -142,7 +162,7 @@
     </div>
 </div>
     <div class="post-content">
-    <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p><font face=STkaiti><font size=5>以下仅为个人经验分享，可能具有<strong>时效性</strong>和<strong>特殊性</strong>，旨在提高读者申请时的通过率，不保证一定能通过。如果文章有问题欢迎评论留言或者给我发邮件：<a href="mailto:&#x65;&#x6c;&#x69;&#122;&#97;&#x62;&#x65;&#116;&#x68;&#x74;&#104;&#x68;&#104;&#64;&#103;&#x6d;&#x61;&#105;&#108;&#46;&#99;&#111;&#x6d;">elizabeththhh@gmail.com</a></font></p>
+    <p><font face=STkaiti><font size=5>以下仅为个人经验分享，可能具有<strong>时效性</strong>和<strong>特殊性</strong>，旨在提高读者申请时的通过率，不保证一定能通过。如果文章有问题欢迎评论留言或者给我发邮件：<a href="mailto:&#101;&#108;&#105;&#122;&#x61;&#x62;&#101;&#116;&#104;&#x74;&#104;&#104;&#104;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">elizabeththhh@gmail.com</a></font></p>
 <h2 id="一、-GitHub-账号准备"><a href="#一、-GitHub-账号准备" class="headerlink" title="一、 GitHub 账号准备"></a>一、 GitHub 账号准备<font size=5></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;访问 GitHub 需要科学上网，具体方法请自行搜索</p>
 <ol>
 <li><p>如果你没有 GitHub 账号，请前往<a target="_blank" rel="noopener" href="https://github.com/signup"> GitHub </a>注册一个账号。注册时使用教育邮箱（<code>edu.cn</code>后缀）</p>
@@ -281,6 +301,24 @@
     
       <div class="post-comment">
 
+    
+        <div id="vcomments"></div>
+        <script>
+            var META = ['nick', 'mail', 'link'];
+            var meta = 'nick,mail';
+            meta = meta.split(',').filter(item => {
+                return META.includes(item);
+            });
+            new Valine({
+                el: '#vcomments',
+                appId: 'aqB9ydq8P6aob29RYObDaxGs-gzGzoHsz',
+                appKey: 'FPfHqN8TC8V2Fox8ZctOSl3M',
+                lang: 'zh-CN',
+                placeholder: 'Say something',
+                avatar: 'mp',
+                meta: meta
+            })
+        </script>    
      
 
      

@@ -47,6 +47,8 @@
 
 
 
+    <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
+
 
 
 
@@ -78,19 +80,37 @@
           
             
               <li class="menu-item">
-                <a href="/">Home</a>
+                <a href="/">主页</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/archives/">Archive</a>
+                <a href="/archives/">归档</a>
               </li> 
                    
           
             
               <li class="menu-item">
-                <a href="/categories/gallery/">Gallery</a>
+                <a href="/categories/gallery/">画廊</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/songs/">听音</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/movies/">观影</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/books/">阅读</a>
               </li> 
                    
           
@@ -129,7 +149,7 @@
             
         </div>
         <span class="post-date">
-            2025 9月 1
+            2025-09-01
         </span>
     </div>
     <div class="post-img">
@@ -139,8 +159,8 @@
     </div>
 </div>
     <div class="post-content">
-    <link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>
-    <div id="aplayer-eTuWOJBQ" class="aplayer aplayer-tag-marker meting-tag-marker"
+    
+    <div id="aplayer-JCifjJqk" class="aplayer aplayer-tag-marker meting-tag-marker"
          data-id="22802347" data-server="netease" data-type="song" data-mode="circulation" data-autoplay="true" data-mutex="false" data-listmaxheight="340px" data-preload="none" data-theme="#ad7a86"
     ></div>
 
@@ -188,6 +208,24 @@
     
       <div class="post-comment">
 
+    
+        <div id="vcomments"></div>
+        <script>
+            var META = ['nick', 'mail', 'link'];
+            var meta = 'nick,mail';
+            meta = meta.split(',').filter(item => {
+                return META.includes(item);
+            });
+            new Valine({
+                el: '#vcomments',
+                appId: 'aqB9ydq8P6aob29RYObDaxGs-gzGzoHsz',
+                appKey: 'FPfHqN8TC8V2Fox8ZctOSl3M',
+                lang: 'zh-CN',
+                placeholder: 'Say something',
+                avatar: 'mp',
+                meta: meta
+            })
+        </script>    
      
 
      
