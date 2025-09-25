@@ -14,7 +14,7 @@
 
 
 
-<title>Tag: Copilot | 西风的话</title>
+<title>Archive: 2024/1 | 西风的话</title>
 
 
 
@@ -123,45 +123,73 @@
 
       <div class="main">
         <div class="flex-container">
-          <div id="tag">
-  
+          <style>
+/* 列表清除默认样式 */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    <p class="tag-title">
-      / <a href="/tag/">tags</a>
-      / <a href="">Copilot</a> /
-    </p>
-    <div class="post-list">
+/* 每条文章 */
+.post-list-item {
+  position: relative;       /* 为绝对定位提供参考 */
+  padding-right: 120px;     /* 给日期留空间，可根据日期长度调整 */
+  margin-bottom: 0.5em;     /* 条目间距 */
+  line-height: 1.5;         /* 垂直间距 */
+}
+
+/* 文章标题 */
+.post-list-item a {
+  display: inline-block;
+  max-width: calc(100% - 130px); /* 保证标题不会覆盖日期 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 太长用省略号 */
+  white-space: nowrap;
+}
+
+/* 日期固定右对齐 */
+.post-date {
+  position: absolute;
+  right: 0;                  /* 靠右 */
+  top: 50%;                  /* 垂直居中 */
+  transform: translateY(-50%);
+  white-space: nowrap;        /* 防止换行 */
+  color: #999;               /* 可选：日期颜色 */
+  font-size: 0.9em;          /* 可选：日期字体 */
+}
+
+/* 响应式：屏幕较小的时候，日期换行到下一行 */
+@media (max-width: 600px) {
+  .post-list-item {
+    padding-right: 0;
+  }
+  .post-list-item a,
+  .post-date {
+    display: block;
+    width: 100%;
+    transform: none;
+    text-align: left;
+    margin-top: 0.2em;
+  }
+}
+</style>
+
+
+
+
+        <h2 class="title">2024-01</h2>
+        <ul class="post-list">
     
-    
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2024/01/02/%E5%9C%A82024%E6%96%B0%E5%B9%B4%E5%A4%9C%E9%B8%BF%E8%BF%90%E5%BD%93%E5%A4%B4/">在2024新年夜鸿运当头</a>
+        <span class="post-date">2024-01-02</span>
+    </li>
 
-        
-
-        
-            <div class="year-title">2025</div>
-        
-
-        <div class="post-list-item">
-            <div class="post-title">
-            <a href="/2025/08/20/%E7%99%BD%E5%AB%96CopilotPro%E6%8C%87%E5%8C%97/">
-                
-                    白嫖 Copilot-Pro 指北
-                
-                </a> 
-            </div>
-            
-            <span class="post-date">2025-08-20</span>
-        </div>
-
-    
-    <div id="paginator">
-        
-    </div>
-</div>
+</ul>
 
 
-  
 
-</div>
         </div>
       </div>
       

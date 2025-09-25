@@ -123,7 +123,59 @@
 
       <div class="main">
         <div class="flex-container">
-          
+          <style>
+/* 列表清除默认样式 */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 每条文章 */
+.post-list-item {
+  position: relative;       /* 为绝对定位提供参考 */
+  padding-right: 120px;     /* 给日期留空间，可根据日期长度调整 */
+  margin-bottom: 0.5em;     /* 条目间距 */
+  line-height: 1.5;         /* 垂直间距 */
+}
+
+/* 文章标题 */
+.post-list-item a {
+  display: inline-block;
+  max-width: calc(100% - 130px); /* 保证标题不会覆盖日期 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 太长用省略号 */
+  white-space: nowrap;
+}
+
+/* 日期固定右对齐 */
+.post-date {
+  position: absolute;
+  right: 0;                  /* 靠右 */
+  top: 50%;                  /* 垂直居中 */
+  transform: translateY(-50%);
+  white-space: nowrap;        /* 防止换行 */
+  color: #999;               /* 可选：日期颜色 */
+  font-size: 0.9em;          /* 可选：日期字体 */
+}
+
+/* 响应式：屏幕较小的时候，日期换行到下一行 */
+@media (max-width: 600px) {
+  .post-list-item {
+    padding-right: 0;
+  }
+  .post-list-item a,
+  .post-date {
+    display: block;
+    width: 100%;
+    transform: none;
+    text-align: left;
+    margin-top: 0.2em;
+  }
+}
+</style>
+
+
 
 
         <h2 class="title">2025-09</h2>
@@ -132,6 +184,11 @@
     <li class="post-list-item">
         <a href="https://elizabeththh.github.io/2025/09/22/%E5%A5%BD%E5%A4%9A%E5%8F%AA%E7%94%B2%E5%A3%B3%E8%99%AB/">好多只甲壳虫</a>
         <span class="post-date">2025-09-22</span>
+    </li>
+
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/09/17/%E5%86%AC%E5%A4%A9%E6%80%8E%E4%B9%88%E8%BF%98%E4%B8%8D%E6%9D%A5/">冬天怎么还不来</a>
+        <span class="post-date">2025-09-17</span>
     </li>
 
     <li class="post-list-item">
@@ -145,8 +202,48 @@
         <ul class="post-list">
     
     <li class="post-list-item">
-        <a href="https://elizabeththh.github.io/2025/08/20/%E5%A6%82%E4%BD%95%E7%94%B3%E8%AF%B7Github-Education%E5%85%8D%E8%B4%B9%E4%BA%AB%E5%8F%97Copilot-Pro/">如何申请 GitHub Education 从而免费享受 Copilot Pro</a>
+        <a href="https://elizabeththh.github.io/2025/08/20/%E7%99%BD%E5%AB%96CopilotPro%E6%8C%87%E5%8C%97/">白嫖 Copilot-Pro 指北</a>
         <span class="post-date">2025-08-20</span>
+    </li>
+
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/08/09/%E6%8A%98%E7%97%95/">折痕</a>
+        <span class="post-date">2025-08-09</span>
+    </li>
+
+            </ul>
+        
+        <h2 class="title">2025-05</h2>
+        <ul class="post-list">
+    
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/05/06/%E8%A1%8C%E4%B8%A4%E6%97%A5%E9%A6%99%E6%B8%AF/">行两日香港</a>
+        <span class="post-date">2025-05-06</span>
+    </li>
+
+            </ul>
+        
+        <h2 class="title">2025-04</h2>
+        <ul class="post-list">
+    
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/04/20/%E4%B8%8D%E5%94%B1%E6%98%A8%E6%97%A5%E7%9A%84%E6%AD%8C%E6%9B%B2/">不唱昨日的歌曲</a>
+        <span class="post-date">2025-04-20</span>
+    </li>
+
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/04/05/%E4%BD%A0%E6%88%91%E7%9A%84%E6%B3%A1%E6%B3%A1/">你我的泡泡</a>
+        <span class="post-date">2025-04-05</span>
+    </li>
+
+            </ul>
+        
+        <h2 class="title">2024-01</h2>
+        <ul class="post-list">
+    
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2024/01/02/%E5%9C%A82024%E6%96%B0%E5%B9%B4%E5%A4%9C%E9%B8%BF%E8%BF%90%E5%BD%93%E5%A4%B4/">在2024新年夜鸿运当头</a>
+        <span class="post-date">2024-01-02</span>
     </li>
 
 </ul>
