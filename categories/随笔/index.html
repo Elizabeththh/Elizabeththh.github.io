@@ -49,6 +49,7 @@
 
     <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 
@@ -193,14 +194,64 @@
       </div>
       
       <div class="footer">
-    <div class="flex-container">
-        <div class="footer-text">
-            
-            
-                
-        </div>
-    </div>
+  <div class="footer-links">
+    <a href="https://github.com/Elizabeththh" target="_blank" title="GitHub">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" 
+           alt="GitHub" class="social-icon">
+    </a>
+    <a href="https://www.douban.com/people/vofoX" target="_blank" title="豆瓣">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/douban.svg" 
+           alt="Douban" class="social-icon">
+    </a>
+    <a href="https://space.bilibili.com/349961988" target="_blank" title="Bilibili">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bilibili.svg" 
+           alt="Bilibili" class="social-icon">
+    </a>
+    <a href="https://steamcommunity.com/profiles/76561199369371944/" target="_blank" title="Steam">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/steam.svg" 
+           alt="Steam" class="social-icon">
+    </a>
+  </div>
 </div>
+
+<!-- 自定义 Footer 样式 -->
+<style>
+.footer {
+    display: flex;
+    justify-content: center;   /* 水平居中 */
+    align-items: center;       /* 垂直居中 */
+    padding: 5px 0;            /* 紧凑的上下间距 */
+    margin: 0;
+    height: auto !important;   /* 覆盖主题默认高度 */
+    min-height: 0 !important;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;                 /* 图标间距 */
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-links .social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, opacity 0.3s;
+    filter: invert(60%);       /* 默认灰色（适合暗背景） */
+}
+
+.footer .footer-links .social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+    filter: invert(30%);       /* 悬停时颜色加深 */
+}
+</style>
+
+
+
+
 
     </div>
 

@@ -49,6 +49,7 @@
 
     <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 
 
@@ -162,7 +163,7 @@
     </div>
 </div>
     <div class="post-content">
-    <p><font face=STkaiti><font size=5>以下仅为个人经验分享，可能具有<strong>时效性</strong>和<strong>特殊性</strong>，旨在提高读者申请时的通过率，不保证一定能通过。如果文章有问题欢迎评论留言或者给我发邮件：<a href="mailto:&#101;&#108;&#105;&#122;&#x61;&#x62;&#101;&#116;&#104;&#x74;&#104;&#104;&#104;&#x40;&#x67;&#109;&#x61;&#105;&#x6c;&#46;&#99;&#x6f;&#x6d;">elizabeththhh@gmail.com</a></font></p>
+    <p><font face=STkaiti><font size=5>以下仅为个人经验分享，可能具有<strong>时效性</strong>和<strong>特殊性</strong>，旨在提高读者申请时的通过率，不保证一定能通过。如果文章有问题欢迎评论留言或者给我发邮件：<a href="mailto:&#x65;&#x6c;&#105;&#122;&#x61;&#x62;&#x65;&#x74;&#104;&#x74;&#104;&#104;&#104;&#x40;&#x67;&#109;&#97;&#x69;&#x6c;&#x2e;&#x63;&#111;&#x6d;">elizabeththhh@gmail.com</a></font></p>
 <h2 id="一、-GitHub-账号准备"><a href="#一、-GitHub-账号准备" class="headerlink" title="一、 GitHub 账号准备"></a>一、 GitHub 账号准备<font size=5></h2><p>&nbsp;&nbsp;&nbsp;&nbsp;访问 GitHub 需要科学上网，具体方法请自行搜索</p>
 <ol>
 <li><p>如果你没有 GitHub 账号，请前往<a target="_blank" rel="noopener" href="https://github.com/signup"> GitHub </a>注册一个账号。注册时使用教育邮箱（<code>edu.cn</code>后缀）</p>
@@ -333,14 +334,64 @@
       </div>
       
       <div class="footer">
-    <div class="flex-container">
-        <div class="footer-text">
-            
-            
-                
-        </div>
-    </div>
+  <div class="footer-links">
+    <a href="https://github.com/Elizabeththh" target="_blank" title="GitHub">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" 
+           alt="GitHub" class="social-icon">
+    </a>
+    <a href="https://www.douban.com/people/vofoX" target="_blank" title="豆瓣">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/douban.svg" 
+           alt="Douban" class="social-icon">
+    </a>
+    <a href="https://space.bilibili.com/349961988" target="_blank" title="Bilibili">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bilibili.svg" 
+           alt="Bilibili" class="social-icon">
+    </a>
+    <a href="https://steamcommunity.com/profiles/76561199369371944/" target="_blank" title="Steam">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/steam.svg" 
+           alt="Steam" class="social-icon">
+    </a>
+  </div>
 </div>
+
+<!-- 自定义 Footer 样式 -->
+<style>
+.footer {
+    display: flex;
+    justify-content: center;   /* 水平居中 */
+    align-items: center;       /* 垂直居中 */
+    padding: 5px 0;            /* 紧凑的上下间距 */
+    margin: 0;
+    height: auto !important;   /* 覆盖主题默认高度 */
+    min-height: 0 !important;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;                 /* 图标间距 */
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-links .social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, opacity 0.3s;
+    filter: invert(60%);       /* 默认灰色（适合暗背景） */
+}
+
+.footer .footer-links .social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+    filter: invert(30%);       /* 悬停时颜色加深 */
+}
+</style>
+
+
+
+
 
     </div>
 
