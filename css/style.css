@@ -1129,6 +1129,14 @@ ul li.task-list-item>input[type=checkbox]:before {
   background-position-y: center;
   --webkit-touch-callout: none;
 }
+@font-face {
+  font-family: 'MyKaiti';
+  src: url("/fonts/stkaiti.ttf") format('truetype');
+  font-display: swap;
+}
+.kaiti-body {
+  font-family: 'MyKaiti', 'STKaiti', KaiTi, serif;
+}
 .icon {
   display: block;
   background-color: #002a56;
