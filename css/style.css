@@ -1196,3 +1196,38 @@ hr {
 .post-tag:hover a {
   color: #fffcf2;
 }
+.post-layout {
+  display: flex;
+  align-items: flex-start;
+}
+.post-content {
+  flex: 1;
+  max-width: 65%; /* 正文宽度 */
+  padding-right: 20px; /* 留出与 TOC 的间距 */
+}
+.post-toc-container {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20px; /* 与正文间距 */
+  position: relative;
+}
+.toc-line {
+  width: 1px;
+  background-color: #ccc;
+  margin-right: 10px;
+}
+.post-toc {
+  font-size: 16px; /* TOC字体大一些 */
+  line-height: 1.5;
+}
+.post-toc ol {
+  padding-left: 0; /* 去掉缩进 */
+  margin: 0;
+  list-style: none; /* 去掉序号 */
+}
+.post-toc li {
+  margin: 6px 0;
+}
+.post-toc li ol {
+  display: none; /* 默认隐藏子标题 */
+}
