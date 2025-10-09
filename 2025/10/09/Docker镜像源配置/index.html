@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <meta name="author" content="Eliza">
+
+
+
+
+
+
+
+<title>Docker镜像源配置 | 西风的话</title>
+
+
+
+    <link rel="icon" href="/home.jpg">
+
+
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Roboto+Mono&display=swap');
+</style>
+
+
+
+    <!-- stylesheets list from _config.yml -->
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+
+
+
+
+    <!-- scripts list from _config.yml -->
+    
+    <script src="/js/menu.js"></script>
+    
+
+
+
+
+
+
+
+    <script src='https://unpkg.com/valine@1.4.16/dist/Valine.min.js'></script>
+
+
+
+
+
+
+
+
+
+  <meta name="generator" content="Hexo 7.3.0"></head>
+  <body>
+    <div class="mask-border">
+    </div>
+
+    <div class="wrapper">
+
+      <div class="header">
+  <div class="flex-container">
+    <div class="header-inner">
+      <div class="site-brand-container">
+        <a href="/">
+          
+            西风的话
+          
+        </a>
+      </div>
+      <div id="menu-btn" class="menu-btn" onclick="toggleMenu()">
+        Menu
+      </div>
+      <nav class="site-nav">
+        <ul class="menu-list">
+          
+            
+              <li class="menu-item">
+                <a href="/">主页</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/gallery/">画廊</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/archives/">归档</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/categories/">分类</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/songs/">听音</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/movies/">观影</a>
+              </li> 
+                   
+          
+            
+              <li class="menu-item">
+                <a href="/books/">阅读</a>
+              </li> 
+                   
+          
+          
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<script src="/js/menu.js"></script>
+
+
+      <div class="main">
+        <div class="flex-container">
+          <article id="post">
+
+  
+    <div class="post-head">
+    <div class="post-info">
+        <div class="tag-list">
+            
+                
+                    <span class="post-tag">
+                        <a href="/tags/Docker/">
+                            Docker
+                        </a>
+                    </span>    
+                
+                    <span class="post-tag">
+                        <a href="/tags/%E9%85%8D%E7%BD%AE/">
+                            配置
+                        </a>
+                    </span>    
+                           
+            
+        </div>
+        <div class="post-title">
+            
+            
+                Docker镜像源配置
+            
+            
+        </div>
+        <span class="post-date">
+            2025-10-09
+        </span>
+    </div>
+    <div class="post-img">
+        
+            <div class="h-line-primary"></div>
+              
+    </div>
+</div>
+    <div class="post-content">
+    <p>        在拉取 Docker 镜像的时候，经常会遇到超时问题，这时我们需要配置 Docker 镜像源和 DNS</p>
+<h2 id="配置-etc-docker-daemon-json-文件">配置 <code>/etc/docker/daemon.json</code> 文件</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -p /etc/docker</span><br><span class="line">sudo tee /etc/docker/daemon.json &gt; /dev/null &lt;&lt;&#x27;EOF&#x27;</span><br><span class="line">&#123;</span><br><span class="line">  &quot;registry-mirrors&quot;: [</span><br><span class="line">    &quot;https://docker.m.daocloud.io&quot;,</span><br><span class="line">    &quot;https://hub.uuuadc.top&quot;,</span><br><span class="line">    &quot;https://mirror.ccs.tencentyun.com&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;dns&quot;: [&quot;8.8.8.8&quot;, &quot;1.1.1.1&quot;, &quot;223.5.5.5&quot;, &quot;114.114.114.114&quot;],</span><br><span class="line">  &quot;max-concurrent-downloads&quot;: 1</span><br><span class="line">&#125;</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<p>设置镜像源是为了能够加速 Docker 镜像的下载，Docker镜像默认从 Docker Hub 拉取，中国大陆访问不稳定。设置 DNS 是为了解决域名解析问题，让 Docker 能够找到 IP 地址。上面写进文件里的 DNS 分别是 Google，Cloudflare，阿里和电信 DNS</p>
+<h2 id="重启-Docker">重启 Docker</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+<h2 id="检查测试">检查测试</h2>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl status docker -n 20  # 应输出 active(running)</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run --rm hello-world  # Hello from Docker</span><br></pre></td></tr></table></figure>
+<p>        <br>
+        <br>
+        <br>
+        <br>
+        </p>
+
+</div> 
+
+<script>
+    window.onload = detectors();
+</script>
+    <div class="post-footer">
+    <div class="h-line-primary"></div>
+    <nav class="post-nav">
+        <div class="prev-item">
+           
+        </div>
+        <div class="next-item">
+            
+                <div class="icon arrow-right"></div>
+                <div class="post-link">
+                  <a href="/2025/08/20/%E7%99%BD%E5%AB%96CopilotPro%E6%8C%87%E5%8C%97/">Next</a>  
+                </div>  
+            
+        </div>
+    </nav>
+</div>
+
+    
+      <div class="post-comment">
+
+    
+        <div id="vcomments"></div>
+        <script>
+            var META = ['nick', 'mail', 'link'];
+            var meta = 'nick,mail';
+            meta = meta.split(',').filter(item => {
+                return META.includes(item);
+            });
+            new Valine({
+                el: '#vcomments',
+                appId: 'aqB9ydq8P6aob29RYObDaxGs-gzGzoHsz',
+                appKey: 'FPfHqN8TC8V2Fox8ZctOSl3M',
+                lang: 'zh-CN',
+                placeholder: 'Say something',
+                avatar: 'mp',
+                meta: meta
+            })
+        </script>    
+     
+
+     
+    
+    
+
+</div>
+     
+  
+</article>
+        </div>
+      </div>
+      
+      <div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/Elizabeththh" target="_blank" title="GitHub">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/github.svg" 
+           alt="GitHub" class="social-icon">
+    </a>
+    <a href="https://www.douban.com/people/vofoX" target="_blank" title="豆瓣">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/douban.svg" 
+           alt="Douban" class="social-icon">
+    </a>
+    <a href="https://space.bilibili.com/349961988" target="_blank" title="Bilibili">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/bilibili.svg" 
+           alt="Bilibili" class="social-icon">
+    </a>
+    <a href="https://steamcommunity.com/profiles/76561199369371944/" target="_blank" title="Steam">
+      <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/steam.svg" 
+           alt="Steam" class="social-icon">
+    </a>
+  </div>
+</div>
+
+
+
+
+<!-- 自定义 Footer 样式 -->
+<style>
+.footer {
+    display: flex;
+    justify-content: center;   /* 水平居中 */
+    align-items: center;       /* 垂直居中 */
+    padding: 5px 0;            /* 紧凑的上下间距 */
+    margin: 0;
+    height: auto !important;   /* 覆盖主题默认高度 */
+    min-height: 0 !important;
+}
+
+.footer .footer-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;                 /* 图标间距 */
+    margin: 0;
+    padding: 0;
+}
+
+.footer .footer-links .social-icon {
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s, opacity 0.3s;
+    filter: invert(60%);       /* 默认灰色（适合暗背景） */
+}
+
+.footer .footer-links .social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.7;
+    filter: invert(30%);       /* 悬停时颜色加深 */
+}
+</style>
+
+
+
+
+
+    </div>
+
+    
+    
+
+  </body>
+</html>
