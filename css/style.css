@@ -354,6 +354,36 @@ input[type="search"]::-webkit-search-results-decoration {
   border-bottom: solid 2px;
   width: 100%;
 }
+.menu-item-dropdown {
+  position: relative;
+}
+.menu-item-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 120px;
+  background: $color-bg-primary;
+  border: 2px solid #002a56;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+.menu-item-dropdown .dropdown-menu .dropdown-item {
+  margin: 0;
+}
+.menu-item-dropdown .dropdown-menu .dropdown-item a {
+  display: block;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+.menu-item-dropdown .dropdown-menu .dropdown-item a:hover {
+  background: $color-bg-secondary;
+}
+.menu-item-dropdown:hover .dropdown-menu {
+  display: block;
+}
 .logo-img {
   max-height: 2.25rem;
   width: auto;
@@ -387,10 +417,23 @@ input[type="search"]::-webkit-search-results-decoration {
     margin-left: auto;
     margin-top: 0.5rem;
   }
+  .header-inner .site-nav .menu-list .menu-item-dropdown .dropdown-menu {
+    position: static;
+    display: none;
+    border: none;
+    margin-top: 0;
+    padding-left: 20px;
+  }
+  .header-inner .site-nav .menu-list .menu-item-dropdown .dropdown-menu .dropdown-item a {
+    padding: 8px 15px;
+  }
   .header-inner .site-nav .active {
     margin-top: 0.75rem;
     height: auto;
     flex-direction: column;
+  }
+  .header-inner .site-nav .active .menu-item-dropdown .dropdown-menu {
+    display: block;
   }
 }
 .footer {
@@ -1195,39 +1238,4 @@ hr {
 }
 .post-tag:hover a {
   color: #fffcf2;
-}
-.post-layout {
-  display: flex;
-  align-items: flex-start;
-}
-.post-content {
-  flex: 1;
-  max-width: 65%; /* 正文宽度 */
-  padding-right: 20px; /* 留出与 TOC 的间距 */
-}
-.post-toc-container {
-  display: flex;
-  flex-direction: row;
-  margin-left: 20px; /* 与正文间距 */
-  position: relative;
-}
-.toc-line {
-  width: 1px;
-  background-color: #ccc;
-  margin-right: 10px;
-}
-.post-toc {
-  font-size: 16px; /* TOC字体大一些 */
-  line-height: 1.5;
-}
-.post-toc ol {
-  padding-left: 0; /* 去掉缩进 */
-  margin: 0;
-  list-style: none; /* 去掉序号 */
-}
-.post-toc li {
-  margin: 6px 0;
-}
-.post-toc li ol {
-  display: none; /* 默认隐藏子标题 */
 }

@@ -14,7 +14,7 @@
 
 
 
-<title>&#39;tag&#39; | 西风的话</title>
+<title>Archive: 2025/4 | 西风的话</title>
 
 
 
@@ -133,49 +133,78 @@
 
       <div class="main">
         <div class="flex-container">
-          <div id="tag">
-  
+          <style>
+/* 列表清除默认样式 */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    <p class="tag-title">/ tags /</p>
-    <div class="tag-cloud">
-  <div class="tag-list">
-    
-      <span class="post-tag">
-        <a href="/tags/Docker/">
-          Docker
-        </a>
-      </span> 
-    
-      <span class="post-tag">
-        <a href="/tags/%E9%85%8D%E7%BD%AE/">
-          配置
-        </a>
-      </span> 
-    
-      <span class="post-tag">
-        <a href="/tags/Copilot/">
-          Copilot
-        </a>
-      </span> 
-    
-      <span class="post-tag">
-        <a href="/tags/GitHub-Education/">
-          GitHub Education
-        </a>
-      </span> 
-    
-      <span class="post-tag">
-        <a href="/tags/%E5%A4%8F%E5%A4%A9/">
-          夏天
-        </a>
-      </span> 
-     
-  </div>
-</div>
-    
-  
+/* 每条文章 */
+.post-list-item {
+  position: relative;       /* 为绝对定位提供参考 */
+  padding-right: 120px;     /* 给日期留空间，可根据日期长度调整 */
+  margin-bottom: 0.5em;     /* 条目间距 */
+  line-height: 1.5;         /* 垂直间距 */
+}
 
-</div>
+/* 文章标题 */
+.post-list-item a {
+  display: inline-block;
+  max-width: calc(100% - 130px); /* 保证标题不会覆盖日期 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 太长用省略号 */
+  white-space: nowrap;
+}
+
+/* 日期固定右对齐 */
+.post-date {
+  position: absolute;
+  right: 0;                  /* 靠右 */
+  top: 50%;                  /* 垂直居中 */
+  transform: translateY(-50%);
+  white-space: nowrap;        /* 防止换行 */
+  color: #999;               /* 可选：日期颜色 */
+  font-size: 0.9em;          /* 可选：日期字体 */
+}
+
+/* 响应式：屏幕较小的时候，日期换行到下一行 */
+@media (max-width: 600px) {
+  .post-list-item {
+    padding-right: 0;
+  }
+  .post-list-item a,
+  .post-date {
+    display: block;
+    width: 100%;
+    transform: none;
+    text-align: left;
+    margin-top: 0.2em;
+  }
+}
+</style>
+
+
+
+
+        <h2 class="title">2025-04</h2>
+        <ul class="post-list">
+    
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/04/20/%E4%B8%8D%E5%94%B1%E6%98%A8%E6%97%A5%E7%9A%84%E6%AD%8C%E6%9B%B2/">不唱昨日的歌曲</a>
+        <span class="post-date">2025-04-20</span>
+    </li>
+
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/04/05/%E4%BD%A0%E6%88%91%E7%9A%84%E6%B3%A1%E6%B3%A1/">你我的泡泡</a>
+        <span class="post-date">2025-04-05</span>
+    </li>
+
+</ul>
+
+
+
         </div>
       </div>
       
