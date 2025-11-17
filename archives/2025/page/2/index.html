@@ -14,7 +14,7 @@
 
 
 
-<title>分类 | 西风的话</title>
+<title>Archive: 2025 | 西风的话</title>
 
 
 
@@ -93,7 +93,7 @@
                    
           
             
-              <li class="menu-item menu-item-active">
+              <li class="menu-item">
                 <a href="/categories/">分类</a>
               </li> 
                    
@@ -109,42 +109,78 @@
 
       <div class="main">
         <div class="flex-container">
-          <div class="main">
-  <h1 class="page-title">分类</h1>
-  <ul class="category-list">
+          <style>
+/* 列表清除默认样式 */
+.post-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* 每条文章 */
+.post-list-item {
+  position: relative;       /* 为绝对定位提供参考 */
+  padding-right: 120px;     /* 给日期留空间，可根据日期长度调整 */
+  margin-bottom: 0.5em;     /* 条目间距 */
+  line-height: 1.5;         /* 垂直间距 */
+}
+
+/* 文章标题 */
+.post-list-item a {
+  display: inline-block;
+  max-width: calc(100% - 130px); /* 保证标题不会覆盖日期 */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* 太长用省略号 */
+  white-space: nowrap;
+}
+
+/* 日期固定右对齐 */
+.post-date {
+  position: absolute;
+  right: 0;                  /* 靠右 */
+  top: 50%;                  /* 垂直居中 */
+  transform: translateY(-50%);
+  white-space: nowrap;        /* 防止换行 */
+  color: #999;               /* 可选：日期颜色 */
+  font-size: 0.9em;          /* 可选：日期字体 */
+}
+
+/* 响应式：屏幕较小的时候，日期换行到下一行 */
+@media (max-width: 600px) {
+  .post-list-item {
+    padding-right: 0;
+  }
+  .post-list-item a,
+  .post-date {
+    display: block;
+    width: 100%;
+    transform: none;
+    text-align: left;
+    margin-top: 0.2em;
+  }
+}
+</style>
+
+
+
+
+        <h2 class="title">2025-04</h2>
+        <ul class="post-list">
     
-      <li>
-        <a href="/categories/gallery/">
-          gallery (7)
-        </a>
-      </li>
-    
-      <li>
-        <a href="/categories/%E6%B8%B8%E8%AE%B0/">
-          游记 (1)
-        </a>
-      </li>
-    
-      <li>
-        <a href="/categories/%E6%8A%80%E6%9C%AF/">
-          技术 (2)
-        </a>
-      </li>
-    
-      <li>
-        <a href="/categories/%E9%9A%8F%E7%AC%94/">
-          随笔 (7)
-        </a>
-      </li>
-    
-      <li>
-        <a href="/categories/tech/">
-          tech (1)
-        </a>
-      </li>
-    
-  </ul>
-</div>
+    <li class="post-list-item">
+        <a href="https://elizabeththh.github.io/2025/04/05/%E4%BD%A0%E6%88%91%E7%9A%84%E6%B3%A1%E6%B3%A1/">你我的泡泡</a>
+        <span class="post-date">2025-04-05</span>
+    </li>
+
+</ul>
+
+
+    <div class=paginator>
+        <div class="h-line-primary"></div>
+        <nav class="pagination">
+            <a class="page-number" href="/archives/2025/">1</a><span class="page-number current">2</span>
+        </nav>
+    </div>
 
 
         </div>
