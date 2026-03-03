@@ -21,7 +21,7 @@ sudo tee /etc/docker/daemon.json > /dev/null <<'EOF'
 }
 EOF
 ```
-设置镜像源是为了能够加速 Docker 镜像的下载，Docker镜像默认从 Docker Hub 拉取，中国大陆访问不稳定。设置 DNS 是为了解决域名解析问题，让 Docker 能够找到 IP 地址。上面写进文件里的 DNS 分别是 Google，Cloudflare，阿里和电信 DNS 
+设置镜像源是为了能够加速 Docker 镜像的下载，Docker镜像默认从 Docker Hub 拉取，中国大陆访问不稳定。设置 DNS 是为了解决域名解析问题，让 Docker 能够找到 IP 地址。上面写进文件里的 DNS 分别是 Google，Cloudflare，阿里和电信 DNS   
 ## 重启 Docker
 ```shell
 sudo systemctl daemon-reload
