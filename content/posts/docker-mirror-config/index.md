@@ -31,7 +31,7 @@ sudo systemctl restart docker
 ## 检查测试
 ```shell
 sudo systemctl status docker -n 20  # 应输出 active(running)
-```
+```  
 
 ```shell
 docker run --rm hello-world  # Hello from Docker
