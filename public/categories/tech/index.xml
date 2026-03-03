@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on Elizabeththh</title>
+    <link>http://localhost:1313/categories/tech/</link>
+    <description>Recent content in Tech on Elizabeththh</description>
+    <generator>Hugo</generator>
+    <language>zh-Hans</language>
+    <copyright>© 2026 Elizabeththh</copyright>
+    <lastBuildDate>Mon, 17 Nov 2025 15:21:04 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>虚拟机设置桥接网络(VMware)</title>
+      <link>http://localhost:1313/posts/vmware-bridge-network/</link>
+      <pubDate>Mon, 17 Nov 2025 15:21:04 +0000</pubDate>
+      <guid>http://localhost:1313/posts/vmware-bridge-network/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
