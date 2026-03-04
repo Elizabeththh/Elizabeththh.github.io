@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>GitHub Education on Elizabeththh</title>
-    <link>http://localhost:1313/tags/github-education/</link>
+    <link>http://localhost:36539/tags/github-education/</link>
     <description>Recent content in GitHub Education on Elizabeththh</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
     <copyright>© 2026 Elizabeththh</copyright>
     <lastBuildDate>Wed, 20 Aug 2025 16:44:08 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/github-education/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:36539/tags/github-education/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>白嫖 Copilot-Pro 指北</title>
-      <link>http://localhost:1313/posts/copilot-pro-guide/</link>
+      <link>http://localhost:36539/posts/copilot-pro-guide/</link>
       <pubDate>Wed, 20 Aug 2025 16:44:08 +0000</pubDate>
-      <guid>http://localhost:1313/posts/copilot-pro-guide/</guid>
+      <guid>http://localhost:36539/posts/copilot-pro-guide/</guid>
       <description></description>
     </item>
   </channel>

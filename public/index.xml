@@ -2,144 +2,144 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Elizabeththh</title>
-    <link>http://localhost:1313/</link>
+    <link>http://localhost:36539/</link>
     <description>Recent content on Elizabeththh</description>
     <generator>Hugo</generator>
     <language>zh-Hans</language>
     <copyright>© 2026 Elizabeththh</copyright>
     <lastBuildDate>Mon, 17 Nov 2025 15:21:04 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:36539/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>虚拟机设置桥接网络(VMware)</title>
-      <link>http://localhost:1313/posts/vmware-bridge-network/</link>
+      <link>http://localhost:36539/posts/vmware-bridge-network/</link>
       <pubDate>Mon, 17 Nov 2025 15:21:04 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vmware-bridge-network/</guid>
+      <guid>http://localhost:36539/posts/vmware-bridge-network/</guid>
       <description></description>
     </item>
     <item>
       <title>在虚拟机上通过 IKEv2 部署 IPSec VPN</title>
-      <link>http://localhost:1313/posts/ikev2-vpn-setup/</link>
+      <link>http://localhost:36539/posts/ikev2-vpn-setup/</link>
       <pubDate>Fri, 14 Nov 2025 12:42:48 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ikev2-vpn-setup/</guid>
+      <guid>http://localhost:36539/posts/ikev2-vpn-setup/</guid>
       <description></description>
     </item>
     <item>
       <title>柏拉图式的追寻</title>
-      <link>http://localhost:1313/posts/ok-computer/</link>
+      <link>http://localhost:36539/posts/ok-computer/</link>
       <pubDate>Fri, 24 Oct 2025 10:11:11 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ok-computer/</guid>
+      <guid>http://localhost:36539/posts/ok-computer/</guid>
       <description></description>
     </item>
     <item>
       <title>Docker镜像源配置</title>
-      <link>http://localhost:1313/posts/docker-mirror-config/</link>
+      <link>http://localhost:36539/posts/docker-mirror-config/</link>
       <pubDate>Thu, 09 Oct 2025 10:15:42 +0000</pubDate>
-      <guid>http://localhost:1313/posts/docker-mirror-config/</guid>
+      <guid>http://localhost:36539/posts/docker-mirror-config/</guid>
       <description></description>
     </item>
     <item>
       <title>Linux 服务器环境配置记录（一）</title>
-      <link>http://localhost:1313/posts/linux-server-setup/</link>
+      <link>http://localhost:36539/posts/linux-server-setup/</link>
       <pubDate>Tue, 30 Sep 2025 16:11:06 +0000</pubDate>
-      <guid>http://localhost:1313/posts/linux-server-setup/</guid>
+      <guid>http://localhost:36539/posts/linux-server-setup/</guid>
       <description></description>
     </item>
     <item>
       <title>想听Bossa Nova</title>
-      <link>http://localhost:1313/posts/bossa-nova/</link>
+      <link>http://localhost:36539/posts/bossa-nova/</link>
       <pubDate>Mon, 29 Sep 2025 00:49:27 +0000</pubDate>
-      <guid>http://localhost:1313/posts/bossa-nova/</guid>
+      <guid>http://localhost:36539/posts/bossa-nova/</guid>
       <description></description>
     </item>
     <item>
       <title>好多只甲壳虫</title>
-      <link>http://localhost:1313/posts/beatles/</link>
+      <link>http://localhost:36539/posts/beatles/</link>
       <pubDate>Mon, 22 Sep 2025 09:11:34 +0000</pubDate>
-      <guid>http://localhost:1313/posts/beatles/</guid>
+      <guid>http://localhost:36539/posts/beatles/</guid>
       <description></description>
     </item>
     <item>
       <title>冬天怎么还不来</title>
-      <link>http://localhost:1313/posts/waiting-for-winter/</link>
+      <link>http://localhost:36539/posts/waiting-for-winter/</link>
       <pubDate>Wed, 17 Sep 2025 01:34:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/waiting-for-winter/</guid>
+      <guid>http://localhost:36539/posts/waiting-for-winter/</guid>
       <description></description>
     </item>
     <item>
       <title>Self</title>
-      <link>http://localhost:1313/posts/self/</link>
+      <link>http://localhost:36539/posts/self/</link>
       <pubDate>Mon, 01 Sep 2025 23:20:48 +0000</pubDate>
-      <guid>http://localhost:1313/posts/self/</guid>
+      <guid>http://localhost:36539/posts/self/</guid>
       <description></description>
     </item>
     <item>
       <title>白嫖 Copilot-Pro 指北</title>
-      <link>http://localhost:1313/posts/copilot-pro-guide/</link>
+      <link>http://localhost:36539/posts/copilot-pro-guide/</link>
       <pubDate>Wed, 20 Aug 2025 16:44:08 +0000</pubDate>
-      <guid>http://localhost:1313/posts/copilot-pro-guide/</guid>
+      <guid>http://localhost:36539/posts/copilot-pro-guide/</guid>
       <description></description>
     </item>
     <item>
       <title>CS61A-week3</title>
-      <link>http://localhost:1313/posts/cs61a-week3/</link>
+      <link>http://localhost:36539/posts/cs61a-week3/</link>
       <pubDate>Tue, 19 Aug 2025 16:00:24 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cs61a-week3/</guid>
+      <guid>http://localhost:36539/posts/cs61a-week3/</guid>
       <description></description>
     </item>
     <item>
       <title>CS61A-week2</title>
-      <link>http://localhost:1313/posts/cs61a-week2/</link>
+      <link>http://localhost:36539/posts/cs61a-week2/</link>
       <pubDate>Sun, 17 Aug 2025 09:01:31 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cs61a-week2/</guid>
+      <guid>http://localhost:36539/posts/cs61a-week2/</guid>
       <description></description>
     </item>
     <item>
       <title>CS61A_week1</title>
-      <link>http://localhost:1313/posts/cs61a-week1/</link>
+      <link>http://localhost:36539/posts/cs61a-week1/</link>
       <pubDate>Sat, 16 Aug 2025 08:47:01 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cs61a-week1/</guid>
+      <guid>http://localhost:36539/posts/cs61a-week1/</guid>
       <description></description>
     </item>
     <item>
       <title>CS61A_介绍</title>
-      <link>http://localhost:1313/posts/cs61a-intro/</link>
+      <link>http://localhost:36539/posts/cs61a-intro/</link>
       <pubDate>Fri, 15 Aug 2025 09:48:28 +0000</pubDate>
-      <guid>http://localhost:1313/posts/cs61a-intro/</guid>
+      <guid>http://localhost:36539/posts/cs61a-intro/</guid>
       <description></description>
     </item>
     <item>
       <title>折痕</title>
-      <link>http://localhost:1313/posts/zhehen/</link>
+      <link>http://localhost:36539/posts/zhehen/</link>
       <pubDate>Sat, 09 Aug 2025 10:29:26 +0000</pubDate>
-      <guid>http://localhost:1313/posts/zhehen/</guid>
+      <guid>http://localhost:36539/posts/zhehen/</guid>
       <description></description>
     </item>
     <item>
       <title>行两日香港</title>
-      <link>http://localhost:1313/posts/two-days-in-hongkong/</link>
+      <link>http://localhost:36539/posts/two-days-in-hongkong/</link>
       <pubDate>Tue, 06 May 2025 20:21:30 +0000</pubDate>
-      <guid>http://localhost:1313/posts/two-days-in-hongkong/</guid>
+      <guid>http://localhost:36539/posts/two-days-in-hongkong/</guid>
       <description></description>
     </item>
     <item>
       <title>不唱昨日的歌曲</title>
-      <link>http://localhost:1313/posts/last-day-song/</link>
+      <link>http://localhost:36539/posts/last-day-song/</link>
       <pubDate>Sun, 20 Apr 2025 19:24:02 +0000</pubDate>
-      <guid>http://localhost:1313/posts/last-day-song/</guid>
+      <guid>http://localhost:36539/posts/last-day-song/</guid>
       <description></description>
     </item>
     <item>
       <title>你我的泡泡</title>
-      <link>http://localhost:1313/posts/bubble/</link>
+      <link>http://localhost:36539/posts/bubble/</link>
       <pubDate>Sat, 05 Apr 2025 00:28:35 +0000</pubDate>
-      <guid>http://localhost:1313/posts/bubble/</guid>
+      <guid>http://localhost:36539/posts/bubble/</guid>
       <description></description>
     </item>
     <item>
       <title>在2024新年夜鸿运当头</title>
-      <link>http://localhost:1313/posts/new-year-2024/</link>
+      <link>http://localhost:36539/posts/new-year-2024/</link>
       <pubDate>Tue, 02 Jan 2024 22:36:32 +0000</pubDate>
-      <guid>http://localhost:1313/posts/new-year-2024/</guid>
+      <guid>http://localhost:36539/posts/new-year-2024/</guid>
       <description></description>
     </item>
   </channel>

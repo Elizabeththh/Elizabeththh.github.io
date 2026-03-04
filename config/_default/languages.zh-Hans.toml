@@ -31,6 +31,7 @@ copyright = "© 2026 Elizabeththh"
   #   { flickr = "https://www.flickr.com/photos/username/" },
   #   { foursquare = "https://foursquare.com/username" },
     { github = "https://github.com/Elizabeththh" },
+    { douban = "https://www.douban.com/people/vofoX"},
   #   { gitlab = "https://gitlab.com/username" },
   #   { google = "https://www.google.com/" },
   #   { google-scholar = "https://scholar.google.com/citations?user=user-id" },
