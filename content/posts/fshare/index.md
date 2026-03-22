@@ -1,11 +1,12 @@
 ---
-title: 
+title: 使用 WinFsp 和 Rclone 实现 Windows 和 Linux 文件共享
 date: "2026-03-22 16:26:32"
+tags: ["tech"]
 ---
 
 # 使用 WinFsp 和 Rclone 实现 Windows 和 Linux 文件共享
 
-最近写实验报告等文档工作经常需要在 Windows 笔记本和实验室 Linux 主机交换文件（主要是截图），今天终于受不了敲 `scp` 命令了，所以探索了一个用 **WinFsp** 和 **Rclone** 实现两个系统间文件共享的方案。
+最近写实验报告等文档工作经常需要在 Windows 笔记本和实验室 Linux 主机交换文件（主要是截图），今天终于受不了敲 `scp` 命令了，所以探索了一个用 **WinFsp** 和 **Rclone** 实现两个系统间文件共享的方案。这下远程 Linux 裸机开发的文件共享的问题彻底解决了，可以再也不用傻缺的 WSL 了
 
 ## 前置条件
 1. [**WinFsp**](https://winfsp.dev/rel/)
@@ -69,7 +70,7 @@ Start-Sleep -Seconds 3
 $rclone_exe = "E:\apps\rclone\rclone.exe"
 $config_path = "E:\apps\rclone\rclone.conf"
 
-# 将远端 /home/eliza 挂载至本地 Z: 盘，注意这里 mount 命令后的 lab 要与 rclone.conf 里定义的名称保持一致
+# 将远端 /home/eliza 挂载至本地 Z: 盘，注意这里 mount 命令后的 lab 要与 rclone.conf 里定义的名称保持一致。只挂载自己的用户目录最好，你也不想手残删掉根目录对吧
 Start-Process -FilePath $rclone_exe -ArgumentList "mount lab:/home/eliza Z: --config ""$config_path"" --vfs-cache-mode writes --dir-cache-time 15s" -WindowStyle Hidden
 ```
 
