@@ -11,7 +11,7 @@ tags: ["tech"]
 ## 前置条件
 1. [**WinFsp**](https://winfsp.dev/rel/)
 
-[winfsp](winstp.png)
+![winfsp](winstp.png)
 
 2. [**Rclone**](https://rclone.org/downloads/)
 
@@ -82,31 +82,31 @@ Start-Process -FilePath $rclone_exe -ArgumentList "mount lab:/home/eliza Z: --co
 
 1. 按下`Win` + `R` 输入 `taskschd.msc` 启动任务计划程序，点击右侧的 **创建任务**
 
-[task-create](task-create.png)
+![task-create](task-create.png)
 
 2. **常规** 标签页：勾选底部的 **隐藏**
 
-[general](general.png)
+![general](general.png)
 
 3. **触发器** 标签页：新建触发器，开始任务选择 **登录时**，勾选 **延迟任务时间** 并输入 `30 秒`（这是为了确保系统底层网络栈已完全初始化）
 
-[trigger](trigger.png)
+![trigger](trigger.png)
 
-[new](new.png)
+![new](new.png)
 
 4. **操作** 标签页：新建操作，程序填入 `powershell.exe`，参数填入：
    `-WindowStyle Hidden -ExecutionPolicy Bypass -File "E:\apps\rclone\Mount-Lab.ps1"`
 
-[operation](operation.png)
+![operation](operation.png)
 
 注意 `-File` 参数后要换成脚本所在的正确路径
 
 5. **条件** 标签页：取消勾选“只有在计算机使用交流电源时才启动此任务”，勾选“只有在以下网络连接可用时才启动”，选择“任何连接”
 
-[cond](cond.png)
+![cond](cond.png)
 
 6. **设置** 标签页：取消勾选“如果任务运行时间超过以下时间，停止任务”，勾选“如果任务失败，按以下频率重新启动”（每一分钟，五次）
 
-[settings](settings.png)
+![settings](settings.png)
 
 保存设置并重启系统。登录后等待 30 秒，就可以在资源管理器中会出现映射好的 Z: 盘啦
