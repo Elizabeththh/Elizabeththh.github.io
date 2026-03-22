@@ -1,8 +1,7 @@
 ---
 title: Docker镜像源配置
 date: "2025-10-09 10:15:42"
-categories: ["技术"]
-tags: ["Docker", "配置"]
+tags: ["Docker", "tech"]
 ---
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在拉取 Docker 镜像的时候，经常会遇到超时问题，这时我们需要配置 Docker 镜像源和 DNS 

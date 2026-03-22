@@ -1,7 +1,6 @@
 ---
 title: 白嫖 Copilot-Pro 指北
 date: "2025-08-20 16:44:08"
-categories: ["技术"]
 tags: ["Copilot", "GitHub Education"]
 ---
 
