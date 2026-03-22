@@ -37,7 +37,7 @@ jobs:
           extended: true
 
       - name: Build
-        run: hugo --minify --gc
+        run: hugo --minify --gc --buildFuture
 
       # 核心架构改变：不再推送到分支，而是将 public 目录打包为系统级 Artifact
       - name: Upload artifact
