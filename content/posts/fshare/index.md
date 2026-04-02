@@ -60,22 +60,47 @@ sha1sum_command = sha1sum
 # 清理可能残留的挂载进程
 Stop-Process -Name "rclone" -Force -ErrorAction SilentlyContinue
 
-# 启动 SSH 隧道（-N 仅转发端口，不执行远端命令）
+# 启动 SSH 隧道
 Start-Process -FilePath "ssh.exe" -ArgumentList "-N lab" -WindowStyle Hidden
 
 # 等待隧道建立
 Start-Sleep -Seconds 3
 
-# 执行 Rclone 挂载
+$mount_point = "E:\remote\lab"
+$parent_dir = Split-Path $mount_point -Parent
+$cache_dir = "E:\apps\rclone\cache"                 # 缓存目录
 $rclone_exe = "E:\apps\rclone\rclone.exe"
 $config_path = "E:\apps\rclone\rclone.conf"
 
-# 将远端 /home/eliza 挂载至本地 Z: 盘，注意这里 mount 命令后的 lab 要与 rclone.conf 里定义的名称保持一致。只挂载自己的用户目录最好，你也不想手残删掉根目录对吧
-Start-Process -FilePath $rclone_exe -ArgumentList "mount lab:/home/eliza Z: --config ""$config_path"" --vfs-cache-mode writes --dir-cache-time 15s" -WindowStyle Hidden
+# 注意 mount 命令后的 lab 要与 rclone.conf 里定义的名称保持一致。
+# 只挂载自己的用户目录最好，你也不想手残删掉根目录对吧
+$rclone_args = @(
+    "mount", "lab:/home/eliza", """$mount_point""",
+    "--config", """$config_path""",
+    "--vfs-cache-mode", "full",
+    "--cache-dir", """$cache_dir""",
+    "--vfs-cache-max-size", "10G",
+    "--vfs-cache-max-age", "24h",
+    "--dir-cache-time", "15s",
+    "--vfs-read-chunk-size", "16M",
+    "-o", "ThreadCount=16"
+)
+
+if (!(Test-Path $parent_dir)) {
+    New-Item -ItemType Directory -Force -Path $parent_dir | Out-Null
+}
+if (Test-Path $mount_point) {
+    Remove-Item -Path $mount_point -Force -Recurse
+}
+
+# 执行挂载
+Start-Process -FilePath $rclone_exe -ArgumentList $rclone_args -WindowStyle Hidden
 ```
 
-- `--vfs-cache-mode writes` 指 **WinFsp** 拦截的写入请求会先被 Rclone 缓存到 Windows 的本地临时目录，待文件句柄关闭后，再异步同步到远程主机
+- `--vfs-cache-mode full` 指 **WinFsp** 拦截的读写请求会先被 Rclone 缓存到 Windows 的本地临时目录，待文件句柄关闭后，再异步同步到远程主机.在读取时，远程数据会以数据块为单位下载到本地并驻留，后续读会命中本地磁盘
 - `--dir-cache-time 15s` 目录结构缓存设为 15s，确保远程主机进行文件的增删时 Windows 能够快速更新。不设成更短的时间区间是因为，目录结构同步的请求延迟高，越短性能开销越大
+
+**起初我的挂载点是一个全局的盘符 E:\\，日常使用中发现资源管理器会经常卡顿，浏览器文件选择会直接卡死，网络 I/O 性能开销过大。于是更改挂载点为一个普通目录，并启用缓存目录，不再出现卡顿情况**
 
 ## 配置系统开机静默自启
 利用 Windows 任务计划程序实现登录后自动挂载：
